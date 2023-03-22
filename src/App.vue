@@ -3,7 +3,7 @@
   <div>
     <p class="calendar__time">{{ 'London time: ' + londonTime }}</p>
 
-    <img src="./assets/forCalendar.png" class="calendar__image" />
+    <img src="/assets/forCalendar.png" class="calendar__image" />
   </div>
 
     <div class="calendar__main">
