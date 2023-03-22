@@ -16,8 +16,7 @@
 <li>HTML</li>
 </ul>
 
-<p> picture was taken from:
-https://designstripe.com/search/illustrations </p>
+[Picture sourse](https://designstripe.com/search/illustrations)
 
 ## Project Setup
 
