@@ -3,7 +3,7 @@
   <div>
     <p class="calendar__time">{{ 'London time: ' + londonTime }}</p>
 
-    <img src="/assets/forCalendar.png" class="calendar__image" />
+    <img src="@/assets/forCalendar.png" class="calendar__image" />
   </div>
 
     <div class="calendar__main">
@@ -46,7 +46,7 @@
       </table>
       <div v-for="event in events" :key="event.start">
         <h2 class="calendar__event">{{ event.title }}</h2>
-        <p class="calendar__event__time">{{ event.start.toLocaleString('en-GB') }} - {{ event.end.toLocaleString('en-GB')}}</p>
+        <p class="calendar__event__time">{{ event.start.toLocaleString('en-GB', { timeZone: 'Europe/Kyiv', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'}).replace(/\//g, '.') }} - {{ event.end.toLocaleString('en-GB', { timeZone: 'Europe/Kyiv', hour: '2-digit', minute: '2-digit'}) + ' ' + 'Часовий пояс (Europe/Kyiv)' }}</p>
       </div>
     </div>
   </div>
