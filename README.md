@@ -1,14 +1,22 @@
-# calendarVue
+# Calendar
+[DEMO](https://sveta-kryukova.github.io/calendarVue/)
 
-This template should help get you started developing with Vue 3 in Vite.
+<img src="https://user-images.githubusercontent.com/116656921/226905005-279ae9aa-b31c-424d-9c78-20236d3ea445.jpg" width="500">
 
-## Recommended IDE Setup
+## Description
+<p> This is a simple calendar that allows users to switch between months and displays the current time in London. The current date is highlighted in violet color, while days with events are colored in light orange.</p>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## What have been used
+<ul>
+<li>VueJs</li>
+<li>CSS</li>
+<li>Bulma library</li>
+<li>Moment-timezone</li>
+<li>JavaScript</li>
+<li>HTML</li>
+</ul>
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[Picture sourse](https://designstripe.com/search/illustrations)
 
 ## Project Setup
 
