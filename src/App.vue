@@ -46,7 +46,7 @@
       </table>
       <div v-for="event in events" :key="event.start">
         <h2 class="calendar__event">{{ event.title }}</h2>
-        <p class="calendar__event__time">{{ event.start.toLocaleString('en-GB', { timeZone: 'Europe/Kyiv', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'}).replace(/\//g, '.') }} - {{ event.end.toLocaleString('en-GB', { timeZone: 'Europe/Kyiv', hour: '2-digit', minute: '2-digit'}) + ' ' + 'Часовий пояс (Europe/Kyiv)' }}</p>
+        <p class="calendar__event__time">{{ event.start.toLocaleString('en-GB', { timeZone: 'Europe/London', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(/\//g, '.') }} - {{ event.end.toLocaleString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false }) + ' ' + 'Часовый пояс (Europe/London)'}}</p>
       </div>
     </div>
   </div>
@@ -69,8 +69,8 @@ export default {
       events: [
         {
           title: 'Подія: запланувати співбесіду з розробником цього календаря💡',
-          start: new Date('2023-03-26T14:00:00+02:00'),
-          end: new Date('2023-03-26T15:00:00+02:00')
+          start: new Date('2023-03-26T12:00:00+01:00'),
+          end: new Date('2023-03-26T13:00:00+01:00')
         }
       ],
       londonTime: null,
