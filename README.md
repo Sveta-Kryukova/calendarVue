@@ -1,7 +1,7 @@
 # Calendar
 [DEMO](https://sveta-kryukova.github.io/calendarVue/)
 
-<img src="https://user-images.githubusercontent.com/116656921/226905005-279ae9aa-b31c-424d-9c78-20236d3ea445.jpg" width="500">
+<img src="https://user-images.githubusercontent.com/116656921/227139268-519057f3-0e5f-44bc-8b02-e662b3edf969.jpg" width="500">
 
 ## Description
 <p> This is a simple calendar that allows users to switch between months and displays the current time in London. The current date is highlighted in violet color, while days with events are colored in light orange.</p>
