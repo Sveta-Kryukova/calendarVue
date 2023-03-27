@@ -1,10 +1,10 @@
 <template>
   <div class="calendar">
-  <div>
-    <p class="calendar__time">{{ 'London time: ' + londonTime }}</p>
+    <div>
+      <p class="calendar__time">{{ 'London time: ' + londonTime }}</p>
 
-    <img src="@/assets/forCalendar.png" class="calendar__image" />
-  </div>
+      <img src="@/assets/forCalendar.png" class="calendar__image" />
+    </div>
 
     <div class="calendar__main">
       <div class="calendar__main__header content">
@@ -34,7 +34,7 @@
               :key="day.date"
               :class="{
                 'other-month': day.otherMonth,
-                'calendar-day--today': today.getDate() === day.date && today.getMonth() === month,
+                'calendar-day--today': isToday(day.date) && !day.otherMonth,
                 'has-events': day.hasEvents
               }"
               @click="showEvents(day)"
@@ -46,7 +46,7 @@
       </table>
       <div v-for="event in events" :key="event.start">
         <h2 class="calendar__event">{{ event.title }}</h2>
-        <p class="calendar__event__time">{{ event.start.toLocaleString('en-GB', { timeZone: 'Europe/London', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(/\//g, '.') }} - {{ event.end.toLocaleString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false }) + ' ' + 'Часовый пояс (Europe/London)'}}</p>
+        <p class="calendar__event__time">{{ event.start.toLocaleString('en-GB', { timeZone: 'Europe/London', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(/\//g, '.') }} - {{ event.end.toLocaleString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false }) + ' ' + 'Часовий пояс (Europe/London)'}}</p>
       </div>
     </div>
   </div>
@@ -165,7 +165,13 @@ export default {
       setTimeout(() => {
         this.getLondonTime();
       }, 1000);
-    }
+    },
+    isToday(date) {
+    const today = new Date()
+    return (
+      date === today.getDate() && this.month === today.getMonth() && this.year === today.getFullYear()
+    )
+  },
   }
 }
 </script>
